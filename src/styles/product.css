@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply flex flex-col min-h-screen;
+  }
+
+  .content {
+    @apply flex flex-col flex-1 justify-center text-center order-1;
+  }
+
+  .container {
+    @apply flex flex-col items-center justify-center pt-8;
+  }
+
+  .containerRow {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .productInfos {
+    @apply text-center mx-8 max-w-5xl;
+  }
+
+  .productInfos p + p {
+    @apply mt-4;
+  }
+
+  .productInfos img {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+    @apply max-w-full object-contain;
+  }
+
+  .productInfos h1 {
+    @apply text-lg font-bold leading-[1.2rem];
+  }
+
+  .productInfos h4,
+  .productInfos p {
+    @apply text-sm;
+  }
+
+  .productInfos h4 {
+    @apply mt-4 mb-1 uppercase;
+  }
+
+  .productInfos p {
+    @apply text-justify leading-4;
+  }
+
+  .productSection {
+    @apply mx-8 flex justify-between content-center mt-4;
+  }
+
+  @screen xl {
+    .productSection {
+      @apply flex-row justify-center items-center mx-[12.5rem];
+    }
+  }
+
+  .productLinks,
+  .groupLinks {
+    @apply text-xs uppercase font-bold flex justify-center content-center mt-2;
+  }
+
+  .groupLinks {
+    @apply justify-start;
+  }
+
+  .productLinks span,
+  .groupLinks span,
+  .productLinks button,
+  .groupLinks button {
+    @apply inline-block align-middle ml-1 uppercase pt-[0.2rem];
+  }
+
+  .groupLinks button,
+  .productLinks button {
+    @apply font-bold pt-0;
+  }
+
+  .productIcons {
+    @apply ml-auto;
+  }
+
+  .productIcons ul li {
+    @apply inline-block;
+  }
+
+  .footer {
+    @apply text-center px-12 mt-4;
+  }
+
+  .footer img {
+    @apply mb-8;
+  }
+
+  .socialMedias {
+    @apply flex flex-row items-center justify-center pt-8 pb-4;
+  }
+
+  .footer a {
+    @apply mx-6;
+  }
+
+  .footer svg {
+    @apply w-10;
+  }
+
+  .accordionInfos {
+    @apply text-center mx-8 max-w-5xl;
+  }
+
+  @screen xl {
+    .accordionInfos {
+      @apply mx-auto;
+    }
+  }
+
+  .accordionVideo {
+    width: 100% !important;
+    height: 214px !important;
+  }
+
+  .accordionText {
+    @apply text-justify leading-4 my-4;
+  }
+
+  .accordionText p {
+    @apply mb-2;
+  }
+
+  .accordionHeading {
+    @apply text-center text-lg font-bold leading-[1.2rem] mt-4;
+  }
+
+  @screen xl {
+    .accordionHeading {
+      @apply mt-12;
+    }
+    .accordionText {
+      @apply px-12;
+    }
+  }
+}

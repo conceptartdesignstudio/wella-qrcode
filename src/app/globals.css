@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
@@ -6,19 +6,215 @@
 @theme {
   --font-sans: 'Inter', sans-serif;
 
-  --color-mantis-50: #F4FAEF;
-  --color-mantis-100: #E9F6E0;
-  --color-mantis-200: #D1EBBC;
-  --color-mantis-300: #BCE29D;
-  --color-mantis-400: #A4D779;
-  --color-mantis-500: #8ECE5A;
-  --color-mantis-600: #74BD38;
-  --color-mantis-700: #5E992E;
+  --color-mantis-50: #f4faef;
+  --color-mantis-100: #e9f6e0;
+  --color-mantis-200: #d1ebbc;
+  --color-mantis-300: #bce29d;
+  --color-mantis-400: #a4d779;
+  --color-mantis-500: #8ece5a;
+  --color-mantis-600: #74bd38;
+  --color-mantis-700: #5e992e;
   --color-mantis-800: #467222;
-  --color-mantis-900: #304F17;
-  --color-mantis-950: #243B12;
+  --color-mantis-900: #304f17;
+  --color-mantis-950: #243b12;
 }
 
 body {
-  @apply antialiased bg-zinc-950 text-white min-h-screen;
+  font-family: 'Aspira', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.excerpt-img {
+  height: 436.5px;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Aspira';
+  src:
+    local('Aspira'),
+    url(../assets/fonts/Aspira-Regular.otf) format('otf');
+}
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  user-select: none;
+}
+
+.visible {
+  overflow: visible;
+}
+
+#pet .st0 {
+  clip-path: url(#SVGID_00000157989209295010178710000000885968072726699193_);
+  fill: none;
+  stroke-width: 13.2;
+  stroke-miterlimit: 10;
+}
+
+#pet .st2 {
+  font-family: 'Arial-BoldMT';
+}
+#pet .st3 {
+  font-size: 39.6px;
+}
+#pet .st4 {
+  letter-spacing: 1;
+}
+#pet .st5 {
+  font-size: 91.3991px;
+}
+#others .st0 {
+  clip-path: url(#SVGID_00000066477705246909258840000005209398373837623958_);
+  fill: none;
+  stroke-width: 13.2;
+  stroke-miterlimit: 10;
+}
+
+#others .st2 {
+  font-family: 'Arial-BoldMT';
+}
+#others .st3 {
+  font-size: 39.6px;
+}
+#others .st4 {
+  letter-spacing: 1;
+}
+#others .st5 {
+  font-size: 84.0115px;
+}
+
+#iron .st0 {
+  clip-path: url(#SVGID_00000008861267450606856170000004901634095842737835_);
+}
+#iron .st2 {
+  font-family: 'Arial-Black';
+}
+#iron .st3 {
+  font-size: 79.6131px;
+}
+#iron .st4 {
+  letter-spacing: 2;
+}
+#iron .st5 {
+  font-family: 'Arial-BoldMT';
+}
+#iron .st6 {
+  font-size: 37.62px;
+}
+#iron .st7 {
+  letter-spacing: 1;
+}
+
+#glass .st1 {
+  fill: none;
+  stroke-width: 0.8326;
+  stroke-miterlimit: 10;
+}
+#glass .st2 {
+  font-family: 'Arial-BoldMT';
+}
+#glass .st3 {
+  font-size: 39.6px;
+}
+#glass .st4 {
+  letter-spacing: 1;
+}
+
+#paper .st0 {
+  clip-path: url(#SVGID_00000079482633657597706240000010451114554685012874_);
+  fill: none;
+  stroke-width: 5.7829;
+  stroke-miterlimit: 10;
+}
+
+#paper .st2 {
+  font-family: 'Arial-BoldMT';
+}
+#paper .st3 {
+  font-size: 39.6px;
+}
+#paper .st4 {
+  letter-spacing: -1;
+}
+#paper .st5 {
+  letter-spacing: 1;
+}
+
+#pebd.st0 {
+  clip-path: url(#SVGID_00000087409986259002094420000012142854341352338109_);
+  fill: none;
+  stroke-width: 13.2;
+  stroke-miterlimit: 10;
+}
+
+#pebd .st2 {
+  font-family: 'Arial-BoldMT';
+}
+#pebd .st3 {
+  font-size: 39.6px;
+}
+#pebd .st4 {
+  letter-spacing: 1;
+}
+#pebd .st5 {
+  font-size: 91.3991px;
+}
+
+#ppPote .cls-1 {
+  clip-path: url(#clippath-1);
+}
+#ppPote .cls-2 {
+  stroke-miterlimit: 10;
+  stroke-width: 10.76px;
+}
+#ppPote .cls-2,
+#ppPote .cls-3 {
+  fill: none;
+}
+#ppPote.cls-4 {
+  clip-path: url(#clippath);
+}
+
+#ppTampa .cls-1 {
+  clip-path: url(#clippath-1);
+}
+#ppTampa .cls-2 {
+  stroke-miterlimit: 10;
+  stroke-width: 10.76px;
+}
+#ppTampa .cls-2,
+#ppTampa .cls-3 {
+  fill: none;
+}
+#ppTampa .cls-4 {
+  clip-path: url(#clippath);
+}
+
+#ppPoteTampa .cls-1 {
+  clip-path: url(#clippath-1);
+}
+#ppPoteTampa .cls-2 {
+  stroke-miterlimit: 10;
+  stroke-width: 10.76px;
+}
+#ppPoteTampa .cls-2,
+#ppPoteTampa .cls-3 {
+  fill: none;
+}
+#ppPoteTampa .cls-4 {
+  clip-path: url(#clippath);
 }

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL
+const baseUrl = process.env.NEXT_PUBLIC_API_URL
 
 if (!baseUrl) throw new Error('Wordpress URL is not set')
 

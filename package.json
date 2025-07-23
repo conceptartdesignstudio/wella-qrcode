@@ -7,14 +7,16 @@
     "dev": "next dev --turbo",
     "start": "next start",
     "build": "next build",
-    "lint": "next lint",
+    "lint": "eslint --cache --fix .",
     "test": "jest --passWithNoTests",
     "test:ci": "jest --passWithNoTests --ci",
     "test:watch": "jest --passWithNoTests --watch",
     "test:coverage": "jest --passWithNoTests --coverage",
-    "prepare": "husky"
+    "prepare": "husky",
+    "forcebuild": "git commit --allow-empty -m 'fix(CICD): trigger build' && git push"
   },
   "dependencies": {
+    "axios": "^1.11.0",
     "clsx": "^2.1.1",
     "next": "^15.1.7",
     "react": "^19.0.0",

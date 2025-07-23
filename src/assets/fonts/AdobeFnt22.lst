@@ -1,0 +1,69 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/marilia/Downloads/Matriz Mobile Folder/Document fonts/AdobeFnt21.lst
+FileLength:1064
+FileModTime:657051642
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Users/marilia/Downloads/Matriz Mobile Folder/Document fonts/AdobeFnt22.lst
+FileLength:1253
+FileModTime:658400405
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Aspira-Bold
+FamilyName:Aspira
+StyleName:Bold
+MenuName:Aspira
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Aspira Bold
+WritingScript:Roman
+OutlineFileName:/Users/marilia/Downloads/Matriz Mobile Folder/Document fonts/Aspira-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:112528
+FileModTime:589275358
+NameArray:0,Mac,4,Aspira Bold
+NameArray:0,Win,1,Aspira
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Aspira-Regular
+FamilyName:Aspira
+StyleName:Regular
+MenuName:Aspira
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Aspira
+WritingScript:Roman
+OutlineFileName:/Users/marilia/Downloads/Matriz Mobile Folder/Document fonts/Aspira-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:112192
+FileModTime:589275358
+NameArray:0,Mac,4,Aspira
+NameArray:0,Win,1,Aspira
+%EndFont
+

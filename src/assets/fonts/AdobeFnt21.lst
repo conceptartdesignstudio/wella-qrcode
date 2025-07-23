@@ -1,0 +1,53 @@
+%!Adobe-FontList 1.20
+%Locale:0x416
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Aspira-Bold
+FamilyName:Aspira
+StyleName:Bold
+FullName:Aspira Bold
+MenuName:Aspira
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\Vinicius\Desktop\Matriz Mobile Folder\Document fonts\Aspira-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:112528
+FileModTime:1567582558
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Aspira Bold
+NameArray:0,Win,1,Aspira
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Aspira-Regular
+FamilyName:Aspira
+StyleName:Regular
+FullName:Aspira
+MenuName:Aspira
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Vinicius\Desktop\Matriz Mobile Folder\Document fonts\Aspira-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:112192
+FileModTime:1567582558
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Aspira
+NameArray:0,Win,1,Aspira
+%EndFont
+

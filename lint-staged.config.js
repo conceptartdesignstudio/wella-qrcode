@@ -1,5 +1,7 @@
 const hooks = {
-  '**/*.ts': ['eslint . --config eslint.config.js']
+  '**/*.{js,ts,tsx}': ['eslint --fix', 'prettier --write'],
+  '**/*.{json,md,css,scss}': ['prettier --write'],
+  '!src/assets/**/*': 'prettier --ignore-unknown'
 }
 
 export default hooks
