@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { getAllProducts } from '@/lib/api'
 import { ProductCard } from '@/components/ProductList/ProductCard'
 import { LoadingSpinner } from '@/components/LoadingSpinner'
@@ -27,7 +28,18 @@ function Home() {
 
   return (
     <section className="bg-[#f9f9f9] h-full py-10">
-      <div className="max-w-6xl mx-auto px-2">
+      <div className="max-w-6xl mx-auto px-2 pb-10">
+        {/* Wella Logo */}
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/images/wella-logo-black.png"
+            alt="Wella Logo"
+            width={180}
+            height={60}
+            priority
+          />
+        </div>
+
         <h2 className="text-center text-3xl font-bold text-[#E41E46] mb-8 tracking-wide">
           Produtos
         </h2>

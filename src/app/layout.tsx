@@ -2,19 +2,20 @@ import './globals.css'
 import '../styles/product.css'
 
 import type { Metadata } from 'next'
+import PageWrapper from './PageWrapper'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Wella Professional',
-    template: '%s - Wella Professional'
+    default: `${process.env.NEXT_PUBLIC_WELLA_NAME}`,
+    template: `%s - ${process.env.NEXT_PUBLIC_WELLA_NAME}`
   },
-  description: 'Site oficial de ingredientes Wella Professional.',
+  description: `Site oficial de ingredientes ${process.env.NEXT_PUBLIC_WELLA_NAME}.`,
   icons: {
     icon: '/wella.ico'
   },
   openGraph: {
-    title: 'Wella Professional',
-    description: 'Descubra os produtos e ingredientes da Wella Professional.',
+    title: `${process.env.NEXT_PUBLIC_WELLA_NAME}`,
+    description: `Descubra os produtos e ingredientes da ${process.env.NEXT_PUBLIC_WELLA_NAME}.`,
     url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     siteName: 'Wella Ingredientes',
     locale: 'pt_BR',
@@ -22,15 +23,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wella Professional',
-    description: 'Descubra os produtos e ingredientes da Wella Professional.'
+    title: `${process.env.NEXT_PUBLIC_WELLA_NAME}`,
+    description: `Descubra os produtos e ingredientes da ${process.env.NEXT_PUBLIC_WELLA_NAME}.`
   }
 }
 
-function AppLayout(props: React.PropsWithChildren) {
+function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{props.children}</body>
+      <body>
+        <PageWrapper>{children}</PageWrapper>
+      </body>
     </html>
   )
 }

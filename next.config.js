@@ -7,6 +7,12 @@ const config = {
         hostname: 'pro.sistemawca.com.br',
         port: '',
         pathname: '/wp-content/uploads/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'retail.sistemawca.com.br',
+        port: '',
+        pathname: '/wp-content/uploads/**'
       }
     ]
   }
