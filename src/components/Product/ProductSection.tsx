@@ -26,6 +26,8 @@ interface Colors {
   titleColor: string
   textColor: string
   moreColor: string
+  informativeColor: string
+  socialMediaColor: string
 }
 
 interface ImageItem {

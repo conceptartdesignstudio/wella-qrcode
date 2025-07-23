@@ -1,6 +1,6 @@
 import { IconProps } from '../IconProps'
 
-export const AluminumSVG = ({
+export const ReciclagemSVG = ({
   selectedColor,
   width = 35,
   height = 35

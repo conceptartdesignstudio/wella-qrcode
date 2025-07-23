@@ -15,6 +15,8 @@ import { PeadSVG } from '../Icons/Materials/PEAD'
 import { DozeMSVG } from '../Icons/Materials/DozeM'
 import { DescartavelSVG } from '../Icons/Materials/Descartavel'
 import { BookSVG } from '../Icons/Materials/Book'
+import { RetornavelSVG } from '../Icons/Materials/Retornavel'
+import { ReciclagemSVG } from '../Icons/Materials/Reciclage'
 
 interface Colors {
   informativeColor: string
@@ -29,13 +31,21 @@ export const Icons: React.FC<IconsProps> = ({ colors, icons }) => {
   return (
     <div className="productIcons">
       <ul>
-        {/* Todos os ícones originais */}
         {icons.eac && (
           <li key="eac">
             <EacSVG selectedColor={colors.informativeColor} />
           </li>
         )}
-        {icons.retornavel ? <li key="retornavel"></li> : null}
+        {icons.reciclagem && (
+          <li key="reciclagem">
+            <ReciclagemSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
+        {icons.retornavel && (
+          <li key="retornavel">
+            <RetornavelSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
         {icons.book && (
           <li key="book">
             <BookSVG selectedColor={colors.informativeColor} />
