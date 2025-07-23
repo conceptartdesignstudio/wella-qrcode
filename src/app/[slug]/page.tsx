@@ -7,6 +7,7 @@ import { Instagram } from '@/components/Icons/Social/Instagram'
 import { Youtube } from '@/components/Icons/Social/Youtube'
 import { transformProductDataFromRest } from '@/utils/transformProduct'
 import Head from 'next/head'
+import { notFound } from 'next/navigation'
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -37,7 +38,9 @@ export default async function SingleProductPage(props: {
   const { slug } = await props.params
 
   const data = await getProductPage(slug)
-  if (!data) return <h1>Produto não encontrado</h1>
+  if (!data) {
+    notFound()
+  }
 
   const product = await transformProductDataFromRest(data)
   const isLoading = false

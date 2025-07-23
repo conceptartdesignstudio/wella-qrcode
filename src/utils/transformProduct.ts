@@ -1,9 +1,6 @@
-import { getMediaUrl } from '@/features/general/getMediaUrl'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function transformProductDataFromRest(data: any) {
   const acf = data?.acf || {}
-
-  const image = await getMediaUrl(acf?.product_image)
 
   return {
     title: data?.title?.rendered || '',
@@ -65,7 +62,7 @@ export async function transformProductDataFromRest(data: any) {
       iron: acf?.iron || false,
       others: acf?.others || false
     },
-    productImg: image || '',
+    productImg: acf?.product_image_url || '',
     singleImage: '',
     slideImages: []
   }

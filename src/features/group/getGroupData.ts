@@ -1,8 +1,10 @@
 import { api } from '@/lib/api'
 import { getMediaUrl } from '@/features/general/getMediaUrl'
 
+export const endpoint = `${process.env.NEXT_PUBLIC_WELLA_ENDPOINT}`
+
 async function getProductData(productId: number, groupSlug: string) {
-  const { data: product } = await api.get(`/wella_professional/${productId}`)
+  const { data: product } = await api.get(`wp/v2/${endpoint}/${productId}`)
 
   return {
     id: product.id,

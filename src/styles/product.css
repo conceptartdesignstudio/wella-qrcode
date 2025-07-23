@@ -213,3 +213,7 @@
     padding: 0 3rem;
   }
 }
+
+.productBtn {
+  font-weight: 600;
+}

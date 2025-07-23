@@ -9,9 +9,11 @@ api.interceptors.request.use((config) => {
   return config
 })
 
+export const endpoint = `${process.env.NEXT_PUBLIC_WELLA_ENDPOINT}`
+
 export async function getProductPage(slug: string) {
   try {
-    const response = await api.get(`wella_professional?slug=${slug}`)
+    const response = await api.get(`wp/v2/${endpoint}?slug=${slug}`)
     return response.data?.[0] || null
   } catch (error) {
     console.error('Erro em getProductPage:', error)
@@ -21,46 +23,36 @@ export async function getProductPage(slug: string) {
 
 export const getAllProducts = async (perPage: number, page: number) => {
   try {
-    const { data: products } = await api.get(`/wella_professional`, {
+    const { data } = await api.get(`custom/v1/wella-products`, {
       params: {
         per_page: perPage,
-        page: page,
-        orderby: 'date',
-        order: 'desc',
-        _embed: true
+        page: page
       }
     })
 
-    const productsWithImages = await Promise.all(
-      products.map(async (product) => {
-        let productImageUrl = null
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const productsWithImages = data.products.map((product: any) => ({
+      id: product.id,
+      title: product.title,
+      slug: product.slug,
+      productImage: product.product_image || product.product_image_url || null
+    }))
 
-        if (product.acf?.product_image) {
-          try {
-            const { data: media } = await api.get(
-              `/media/${product.acf.product_image}`
-            )
-            productImageUrl = media.source_url
-          } catch (error) {
-            console.warn(
-              `Failed to fetch image for product ${product.id}`,
-              error
-            )
-          }
-        }
-
-        return {
-          id: product.id,
-          title: product.title.rendered,
-          slug: product.slug,
-          productImage: productImageUrl
-        }
-      })
-    )
-
-    return productsWithImages
+    return {
+      page: data.page,
+      perPage: data.per_page,
+      total: data.total,
+      totalPages: data.total_pages,
+      products: productsWithImages
+    }
   } catch (error) {
     console.error(error)
-    return []
+    return {
+      page: page,
+      perPage: perPage,
+      total: 0,
+      totalPages: 0,
+      products: []
+    }
   }
 }
