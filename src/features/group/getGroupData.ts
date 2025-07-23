@@ -17,8 +17,6 @@ async function getProductData(productId: number, groupSlug: string) {
 }
 
 export async function getGroupData(slug: string) {
-  console.log('Buscando grupo com slug:', slug)
-
   const { data } = await api.get(`/grupos?slug=${encodeURIComponent(slug)}`)
   if (!Array.isArray(data) || !data.length) {
     console.warn('Grupo não encontrado:', data)

@@ -28,6 +28,7 @@ export const GroupProduct = ({
           width={150}
           height={150}
           priority
+          className="h-auto w-auto max-w-full object-contain"
         />
       )}
       <div className="flex-1 flex flex-col justify-start">

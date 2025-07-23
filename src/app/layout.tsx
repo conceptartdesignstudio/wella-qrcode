@@ -1,4 +1,5 @@
 import './globals.css'
+import '../styles/product.css'
 
 function AppLayout(props: React.PropsWithChildren) {
   return (

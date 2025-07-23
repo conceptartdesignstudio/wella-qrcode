@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { getAllProducts } from '@/lib/wordpress'
+import { getAllProducts } from '@/lib/api'
 import Image from 'next/image'
 
 function Home() {
