@@ -8,6 +8,29 @@ import { Youtube } from '@/components/Icons/Social/Youtube'
 import { transformProductDataFromRest } from '@/utils/transformProduct'
 import Head from 'next/head'
 
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await props.params
+
+  const data = await getProductPage(slug)
+  const product = await transformProductDataFromRest(data)
+
+  return {
+    title: product.title
+      ? `${product.title} - Wella Professional`
+      : 'Wella Professional',
+    icons: {
+      icon: '/wella.ico'
+    }
+  }
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1
+}
+
 export default async function SingleProductPage(props: {
   params: Promise<{ slug: string }>
 }) {
