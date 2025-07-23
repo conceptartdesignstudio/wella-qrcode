@@ -1,6 +1,5 @@
 import React from 'react'
-// import { Icons } from '@/components/Product/Icons'
-// import { Plus } from '@/components/Icons/Others/Plus'
+import { Icons } from '@/components/Product/Icons'
 import { LearnLink } from '@/components/LearnMore/LearnLink'
 
 interface LearnMore {
@@ -47,7 +46,8 @@ interface ProductSectionProps {
 export const ProductSection: React.FC<ProductSectionProps> = ({
   displayRules,
   learnMore,
-  colors
+  colors,
+  icons
 }) => {
   return (
     <>
@@ -58,7 +58,7 @@ export const ProductSection: React.FC<ProductSectionProps> = ({
           <LearnLink selectedColor={colors.moreColor} link={learnMore.link} />
         )}
 
-        {/* <Icons icons={icons} colors={colors} key="informative-icons" /> */}
+        <Icons icons={icons} colors={colors} key="informative-icons" />
       </section>
     </>
   )

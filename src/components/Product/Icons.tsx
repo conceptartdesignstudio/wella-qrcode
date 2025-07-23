@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '@/styles/Product.module.css'
 import { PetSVG } from '@/components/Icons/Materials/Pet'
 import { OthersSVG } from '@/components/Icons/Materials/Others'
 import { IronSVG } from '@/components/Icons/Materials/Iron'
@@ -10,6 +9,12 @@ import { AluminumSVG } from '@/components/Icons/Materials/Aluminum'
 import { PpTampaSVG } from '@/components/Icons/Materials/PPTampa'
 import { PpPoteSVG } from '@/components/Icons/Materials/PPPote'
 import { PpPoteTampaSVG } from '@/components/Icons/Materials/PPPoteTampa'
+import { EacSVG } from '../Icons/Materials/EAC'
+import { TrashCanSVG } from '../Icons/Materials/TrashCan'
+import { PeadSVG } from '../Icons/Materials/PEAD'
+import { DozeMSVG } from '../Icons/Materials/DozeM'
+import { DescartavelSVG } from '../Icons/Materials/Descartavel'
+import { BookSVG } from '../Icons/Materials/Book'
 
 interface Colors {
   informativeColor: string
@@ -22,29 +27,35 @@ interface IconsProps {
 
 export const Icons: React.FC<IconsProps> = ({ colors, icons }) => {
   return (
-    <div className={styles.productIcons}>
+    <div className="productIcons">
       <ul>
         {/* Todos os ícones originais */}
         {icons.eac && (
           <li key="eac">
-            {/* SVG do eac */}
-            <svg
-              version="1.1"
-              viewBox="0 0 425.2 425.2"
-              width="35px"
-              height="35px"
-              preserveAspectRatio="xMidYMid meet">
-              <path
-                fill={colors.informativeColor}
-                d="M132.1,211.2h20.8v20.8h-20.8v62.5h20.8v20.8h-41.7V127.8h41.7v20.9h-20.8V211.2z M215.5,232.1v83.4h20.9
-              V127.8h-62.5v187.6h20.8v-83.4H215.5z M215.5,211.2h-20.8v-62.5h20.8V211.2z M278,148.7h20.8v-20.9h-41.7v187.6h41.7v-20.8H278
-              V148.7z"
-              />
-            </svg>
+            <EacSVG selectedColor={colors.informativeColor} />
           </li>
         )}
-
-        {/* Restante dos ícones ... */}
+        {icons.retornavel ? <li key="retornavel"></li> : null}
+        {icons.book && (
+          <li key="book">
+            <BookSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
+        {icons.descartavel && (
+          <li key="descartavel">
+            <DescartavelSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
+        {icons.dozeM && (
+          <li key="12m">
+            <DozeMSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
+        {icons.lixeira && (
+          <li key="lixeira">
+            <TrashCanSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
         {icons.aluminum && (
           <li key="aluminum">
             <AluminumSVG selectedColor={colors.informativeColor} />
@@ -68,6 +79,11 @@ export const Icons: React.FC<IconsProps> = ({ colors, icons }) => {
         {icons.pet && (
           <li key="pet">
             <PetSVG selectedColor={colors.informativeColor} />
+          </li>
+        )}
+        {icons.pead && (
+          <li key="pead">
+            <PeadSVG selectedColor={colors.informativeColor} />
           </li>
         )}
         {icons.pebd && (
