@@ -45,6 +45,18 @@ export const ProductBrand: React.FC<ProductBrandProps> = ({ brandName }) => {
       width: '200',
       height: '40'
     },
+    {
+      name: 'sebastian-black-new',
+      image: '/brands/sebastian-black-new.png',
+      width: '200',
+      height: '40'
+    },
+    {
+      name: 'sebastian-white-new',
+      image: '/brands/sebastian-white-new.png',
+      width: '200',
+      height: '40'
+    },
     { name: 'nioxin', image: '/brands/nioxin.png', width: '200', height: '42' },
     {
       name: 'clinical',
