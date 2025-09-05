@@ -33,9 +33,9 @@ export function ProductCard({ id, image, title, slug }: ProductCardProps) {
 
       {/* Contêiner para título e espaçamento flexível */}
       <div className="flex flex-col flex-grow justify-between w-full">
-        <h3 className="text-center text-[#29241f] font-semibold text-[16px] line-clamp-2 capitalize mb-4">
-          {toTitleCase(title)}
-        </h3>
+        <h3
+          className="text-center text-[#29241f] font-semibold text-[16px] line-clamp-2 capitalize mb-4"
+          dangerouslySetInnerHTML={{ __html: toTitleCase(title) }}></h3>
 
         {/* Botão Ver Detalhes */}
         <Link
